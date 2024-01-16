@@ -1,0 +1,47 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Wheels!</title>
+    <link rel="stylesheet" href="/css/jass.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css" />
+  </head>
+
+  <body>
+    <div class="flex-column justify-space-around">
+      <header class="display-flex justify-space-between align-center p-2">
+        {{! <img src="/img/blurcar.jpg" style="width:100px;height:100px;" /> }}
+        <h1>Retro Wheels</h1>
+        <nav>
+          <!-- Conditionally render login or logout links -->
+          {{#if loggedIn}}
+            <button id="logout" class="btn-no-style">Logout</button>
+          {{/if}}
+        </nav>
+      </header>
+    </div>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{body}}}
+      <script src="https://unpkg.com/kursor"></script>
+      <script src="/js/cursorCar.js"></script>
+
+      <script>
+        new kursor({ type: 3 })
+      </script>
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <!-- Render script for logged in users only -->
+    {{#if loggedIn}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
+
+  </body>
+
+</html>

@@ -1,0 +1,15 @@
+{{#if loggedIn}}
+  <section>
+    <img src="/images/{{car.filename}}" alt="{{car.description}}" />
+    <form class="form car-details">
+      <h3>{{car.name}}</h3>
+      <p> Price: {{car.price}}</p>
+      <p> kilometers Run: {{car.kilometers}}</p>
+      <p> Manufacture year :{{car.manufacture_year}}</p>
+      <button class="btn btn-primary" type="submit">Reserve the Car</button>
+    </form>
+  </section>
+
+{{/if}}
+<script src="/js/reserve.js"></script>
+<script src="/js/cursorCar.js"></script>
